@@ -1,0 +1,23 @@
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <h1>My Classes</h1>
+  </div>
+</header>
+
+<div class="container">
+  <div class="col-xs-3">
+    <div ng-repeat="class in classes.classList">
+      <h1 class="btn btn-large section-title" ng-click="class.isCollapsed = !class.isCollapsed">{{class.className}}</h1>
+      <div id="class-section" class="panel panel-default" collapse="class.isCollapsed">
+        <div class="panel-body">
+          <h4>Groups:</h4>
+          <li class="btn" ng-repeat="group in class.groupList" ng-click="showGroupInfo(group)">{{group.groupName}}</li>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" ng-show="classes.showGroup">
+  <h1 class="col-xs-2">test</h1>
+</div>

@@ -1,0 +1,15 @@
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <!--<img class="resize" src="assets/images/WordRiverLogo.png" alt="we have a logo!"><br>-->
+    <h1>Word River</h1>
+    <h4 ng-hide="homepage.isLoggedIn"> Please login to continue </h4>
+  </div>
+</header>
+
+<div ng-show="homepage.isLoggedIn" align="center" class="container panel">
+  <h3 class="panel-body">Would you like to view:</h3>
+  <h4 class="panel-body"><a href="/myClasses">My Classes</a></h4>
+  <h4 class="panel-body"><a href="/myStudents">My Students</a></h4>
+  <h4 class="panel-body"><a href="/myWordPacks">My Word Packs</a></h4>
+  <h4 class="panel-body"><a href="/myWords">My Words</a></h4>
+</div>

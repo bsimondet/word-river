@@ -1,0 +1,17 @@
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <h1>My Students</h1>
+  </div>
+</header>
+<br>
+<div class="container">
+  <div class="container student-list col-xs-3">
+    <div ng-repeat="student in studentctrl.studentList | orderBy:'lastName'">
+      <li class="btn" ng-click="studentctrl.showStudentInfo(student)">{{student.lastName}}, {{student.firstName}}</li>
+    </div>
+  </div>
+</div>
+
+<div class="container" ng-show="studentctrl.showStudent">
+  <h1 class="col-xs-2">test</h1>
+</div>
